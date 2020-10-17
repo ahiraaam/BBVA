@@ -1,13 +1,78 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #acf0a3 !important;
+  height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header {
+  background-color: #acf0a3;
+  height: 10vh;
+}
+
+.cont {
+  background-color: #acf0a3;
+  height: 92vh;
+}
+
+.logoHeader {
+  height: 10vh;
+  margin-top: 1vh;
+}
+
+.centrador {
+  position: relative;
+  background-color: #acf0a3;
+}
+
+.imagen {
+  position: absolute;
+  width: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.centerText {
+  justify-content: center;
+}
+
+.centerText h1 {
+  padding-top: 15vh;
+  padding-left: 5vw;
+  padding-bottom: 5vh;
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.img-grande {
+  height: 20vh;
+  margin: 5vh;
+}
+
+.cardPersonalized {
+  height: 60vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btnGeneral {
+  width: 80% !important;
+}
+
+.green {
+  background-color: rgb(25, 179, 25) !important;
+  border-color: rgb(25, 179, 25) !important;
+}
+.blue {
+  background-color: rgb(5, 36, 141) !important;
+  border-color: rgb(5, 36, 141) !important;
 }
