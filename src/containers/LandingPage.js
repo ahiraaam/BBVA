@@ -2,6 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row, Card, Button, CardDeck } from "react-bootstrap";
 import "../index.css";
+import { Link } from "react-router-dom";
+
 function LandingPage() {
   return (
     <Container fluid className="green">
@@ -60,9 +62,11 @@ function LandingPage() {
                 </Card.Text>
               </Card.Body>
               <Card.Footer className="footerCard">
-                <Button className="btnGeneral blue" variant="primary">
-                  Calcular
-                </Button>
+                <Link to="login">
+                  <Button className="btnGeneral blue" variant="primary">
+                    Calcular
+                  </Button>
+                </Link>
               </Card.Footer>
             </Card>
             <Card
@@ -88,7 +92,9 @@ function LandingPage() {
                 </Card.Text>
               </Card.Body>
               <Card.Footer className="footerCard">
-                <Button className="btnGeneral green">Calcular</Button>
+                <Link to="agua">
+                  <Button className="btnGeneral green">Calcular</Button>
+                </Link>
               </Card.Footer>
             </Card>
           </CardDeck>

@@ -11,6 +11,7 @@ import {
   Form,
 } from "react-bootstrap";
 import "../index.css";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -60,7 +61,9 @@ function Login() {
           </Row>
           <Row className="centerTextInput">
             {" "}
-            <Button className="btnIngresar blue">Ingresa con BBVA</Button>
+            <Link to="agua">
+              <Button className="btnIngresar blue">Ingresa con BBVA</Button>
+            </Link>
           </Row>
         </Col>
         <Col xs={12} md={3}></Col>

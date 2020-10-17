@@ -2,6 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row, Button, Form } from "react-bootstrap";
 import "../index.css";
+import { Link } from "react-router-dom";
+
 function Gas() {
   return (
     <div>
@@ -50,7 +52,9 @@ function Gas() {
                   className="inputAlone"
                   name="agua"
                 ></Form.Control>
-                <Button className="btnGeneral green">Siguiente</Button>
+                <Link to="gasolina">
+                  <Button className="btnGeneral green">Siguiente</Button>
+                </Link>
               </Form>
             </Row>
           </Col>

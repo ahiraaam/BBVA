@@ -2,6 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row, Button, Form } from "react-bootstrap";
 import "../index.css";
+import { Link } from "react-router-dom";
+
 function Agua() {
   return (
     <div>
@@ -49,7 +51,9 @@ function Agua() {
                   className="inputAlone"
                   name="agua"
                 ></Form.Control>
-                <Button className="btnGeneral blue">Siguiente</Button>
+                <Link to="electricidad">
+                  <Button className="btnGeneral blue">Siguiente</Button>
+                </Link>
               </Form>
             </Row>
           </Col>
