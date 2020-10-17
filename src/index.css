@@ -48,7 +48,6 @@ code {
 
 .centerText h1 {
   padding-top: 15vh;
-  padding-left: 5vw;
   padding-bottom: 5vh;
   font-weight: 900;
   font-size: 3.5em;
@@ -70,9 +69,157 @@ code {
 
 .green {
   background-color: rgb(25, 179, 25) !important;
-  border-color: rgb(25, 179, 25) !important;
+  border-color: #19b319 !important;
 }
 .blue {
-  background-color: rgb(5, 36, 141) !important;
+  background-color: #05248d !important;
   border-color: rgb(5, 36, 141) !important;
+}
+
+.contPreguntas {
+  background-color: #acf0a3;
+  height: 100vh;
+}
+
+.left {
+  background-color: white;
+}
+.right {
+  background: rgba(130, 227, 113, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(130, 227, 113, 1) 0%,
+    rgba(194, 245, 186, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(130, 227, 113, 1)),
+    color-stop(100%, rgba(194, 245, 186, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(130, 227, 113, 1) 0%,
+    rgba(194, 245, 186, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(130, 227, 113, 1) 0%,
+    rgba(194, 245, 186, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(130, 227, 113, 1) 0%,
+    rgba(194, 245, 186, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(130, 227, 113, 1) 0%,
+    rgba(194, 245, 186, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82e371', endColorstr='#c2f5ba', GradientType=1 );
+}
+
+.rightBlue {
+  background: rgba(5, 36, 141, 1);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(5, 36, 141, 1) 0%,
+    rgba(126, 149, 217, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right bottom,
+    color-stop(0%, rgba(5, 36, 141, 1)),
+    color-stop(100%, rgba(126, 149, 217, 1))
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(5, 36, 141, 1) 0%,
+    rgba(126, 149, 217, 1) 100%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    rgba(5, 36, 141, 1) 0%,
+    rgba(126, 149, 217, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    rgba(5, 36, 141, 1) 0%,
+    rgba(126, 149, 217, 1) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgba(5, 36, 141, 1) 0%,
+    rgba(126, 149, 217, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05248d', endColorstr='#7e95d9', GradientType=1 );
+}
+.img-inputs {
+  height: 50vh;
+  margin: 5vh;
+}
+.inputAlone {
+  width: 100% !important;
+  margin-bottom: 5vh;
+}
+
+.colorBlue {
+  color: #05248d;
+}
+.colorGreen {
+  color: #19b319;
+}
+
+/*LOGIN**/
+
+.img-mediana {
+  height: 15vh;
+  margin-top: 5vh;
+}
+
+.centerTextSign {
+  justify-content: center;
+}
+
+.centerTextSign h1 {
+  padding-top: 15vh;
+  padding-left: 0vw;
+  padding-bottom: 5vh;
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.centerTextInput {
+  justify-content: center;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.centerTextInput {
+  justify-content: center;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.btnIngresar {
+  height: 6vh;
+  padding-left: 5vw !important;
+  padding-right: 5vw !important;
+  font-size: 1.5em !important;
+  border-radius: 20px !important;
+}
+
+.inputSign {
+  height: 4vw !important;
+  font-size: 1.5em !important;
+}
+
+.imgbbva {
+  margin-left: 30vh !important;
+}
+
+.footerCard {
+  background-color: white !important;
+  border-top: 0px solid white !important;
 }
