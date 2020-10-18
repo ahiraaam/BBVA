@@ -1,0 +1,39 @@
+{% extends 'formater.html' %}
+
+{% block title %}
+    <title>Entrada de datos</title>
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/inputer.css') }}">
+{% endblock %}
+
+{% block content %}
+
+  <form action ="/resultados" method = "POST" > {# el metodo es para publicar información "post" la action es que los que va a ser, en este caso ir a una direccion #}
+
+      <div class="form-group">
+          <label for="inputElectricidad">Electricidad</label>
+          <input name="Electricidad" type="text" class="form-control" id="inputElectricidad" placeholder="Pago mensua">
+      </div>
+
+      <div class="form-group">
+          <label for="inputAgua">Agua</label>
+          <input name="Agua" type="text" class="form-control" id="inputAgua" placeholder="Pago mensual">
+      </div>
+
+      <div class="form-group">
+          <label for="inputGasolina">Gasolina</label>
+          <input name="Gasolina" type="text" class="form-control" id="inputGasolina" placeholder="Pago mensual">
+      </div>
+
+      <div class="form-group">
+          <label for="inputGas">Gas cilindro</label>
+          <input name="Gas" type="text" class="form-control" id="inputGas" placeholder="Pago mensual">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+
+  </form>
+
+{% endblock %}

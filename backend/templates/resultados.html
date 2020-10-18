@@ -1,0 +1,23 @@
+{% extends 'formater.html' %}
+
+{% block title %}
+    <title>Resultados</title>
+{% endblock %}
+
+{% block content %}
+
+    <h1>Resultados</h1>
+
+    {# crea una tabla HTML #}
+    <table class="table table-striped">
+        {% for key,value in result.items() %}
+            <tr>
+                <th>{{ key }}</th>
+                <td>{{ value }}</td>
+            </tr>
+        {% endfor %} 
+    </table>
+    <h2>Tus resultados de CO2 equivalente son:</h2>
+    {{co2}}
+
+{% endblock %}

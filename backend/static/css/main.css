@@ -1,0 +1,89 @@
+body{
+    background-color: #acf0a3;
+    color: black;
+}
+
+.grid{
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100% 100%;
+    gap: 1em;
+}
+
+#iconito{
+    margin-top: 20px;
+    margin-right: 20px;
+    padding-bottom:50px ;
+}
+
+
+#btnBBVA > .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #01467a !important;
+}
+#btnExt > .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #3f9d2f !important;
+}
+.container {
+  height: 200px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.grid #leftTitle{
+    font-size: 60px;
+    color: #262626;
+    padding: 15px;
+}
+
+.gridLeft div{
+
+    padding: 20px;
+}
+.gridLeft div img {
+margin: auto;
+display: block;
+}
+
+.grideRight{
+    display: grid;
+    margin-right: 30px;
+    margin-left: 15px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100% 100%;
+    gap: 5px;
+
+}
+.grideRight #bbva{
+    font-size: 60px;
+    color: #01467a;
+    text-align: center;
+    padding: 10px;
+}
+.grideRight #externo{
+    font-size: 60px;
+    color: #3f9d2f;
+    text-align: center;
+    padding: 10px;
+}
+
+.cuadrito{
+    padding: 10px;
+    margin: 20px;
+
+}
+
+.grideRight div {
+    background-color: white;
+
+
+}
