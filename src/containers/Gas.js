@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row, Button, Form } from "react-bootstrap";
 import "../index.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Gas() {
+  const { state } = useLocation();
+
+  const [datos, setDatos] = useState({
+    agua: state.aguaValor,
+    electricidad: state.electricidadValor,
+    gas: 0,
+  });
+  console.log(("Datos Gas", datos));
+
+  const handleChange = (event) => {
+    setDatos({ ...datos, [event.target.name]: event.target.value });
+  };
   return (
     <div>
       <Container fluid className="green text-center">
@@ -50,9 +62,19 @@ function Gas() {
                   placeholder="$10000"
                   type="number"
                   className="inputAlone"
-                  name="agua"
+                  name="gas"
+                  onChange={handleChange}
                 ></Form.Control>
-                <Link to="gasolina">
+                <Link
+                  to={{
+                    pathname: "/gasolina",
+                    state: {
+                      aguaValor: datos.agua,
+                      electricidadValor: datos.electricidad,
+                      gasValor: datos.gas,
+                    },
+                  }}
+                >
                   <Button className="btnGeneral green">Siguiente</Button>
                 </Link>
               </Form>

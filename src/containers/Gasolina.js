@@ -1,10 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row, Button, Form } from "react-bootstrap";
 import "../index.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import axios from "axios";
 
 function Gasolina() {
+  const { state } = useLocation();
+  const [resultados, setResultados] = useState({});
+
+  const [datos, setDatos] = useState({
+    agua: state.aguaValor,
+    electricidad: state.electricidadValor,
+    gas: state.gasValor,
+    gasolina: 0,
+  });
+
+  console.log(("Datos Gasolina", datos));
+  const handleChange = (event) => {
+    setDatos({ ...datos, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    await fetch("http://localhost:5000", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(datos),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        //setUsername(data.name);
+        setResultados(data);
+        console.log("Resultados", resultados);
+      });
+  };
+
   return (
     <div>
       <Container fluid className="green text-center">
@@ -49,10 +81,25 @@ function Gasolina() {
                   placeholder="$10000"
                   type="number"
                   className="inputAlone"
-                  name="agua"
+                  name="gasolina"
+                  onChange={handleChange}
                 ></Form.Control>
-                <Link>
-                  <Button className="btnGeneral blue">Siguiente</Button>
+                <Button className="btnGeneral blue" onClick={handleSubmit}>
+                  Calcular
+                </Button>
+                <Link
+                  to={{
+                    pathname: "/resultados",
+                    state: {
+                      CO2EquivalenteAnual: resultados.CO2EquivalenteAnual,
+                      PorcentajeAgua: resultados.PorcentajeAgua,
+                      PorcentajeElectricidad: resultados.PorcentajeElectricidad,
+                      PorcentajeGas: resultados.PorcentajeGas,
+                      PorcentajeGasolina: resultados.PorcentajeGasolina,
+                    },
+                  }}
+                >
+                  <Button>Ver resultados</Button>
                 </Link>
               </Form>
             </Row>

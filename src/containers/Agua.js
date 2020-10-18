@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row, Button, Form } from "react-bootstrap";
 import "../index.css";
 import { Link } from "react-router-dom";
 
 function Agua() {
+  const [agua, setAgua] = useState(100);
+
+  const handleChange = (event) => {
+    setAgua(event.target.value);
+  };
   return (
     <div>
       <Container fluid className="green text-center">
         <Row className="contPreguntas">
           <Col xs={12} md={6} className="left">
             <Row className="centerText">
-              <h1 lassName="colorGreen">AGUA</h1>
+              <h1 className="colorGreen">AGUA</h1>
             </Row>
             <Row className="centerText">
               {" "}
@@ -50,8 +55,16 @@ function Agua() {
                   type="number"
                   className="inputAlone"
                   name="agua"
+                  onChange={handleChange}
                 ></Form.Control>
-                <Link to="electricidad">
+                <Link
+                  to={{
+                    pathname: "/electricidad",
+                    state: {
+                      aguaValor: agua,
+                    },
+                  }}
+                >
                   <Button className="btnGeneral blue">Siguiente</Button>
                 </Link>
               </Form>

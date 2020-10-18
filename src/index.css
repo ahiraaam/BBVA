@@ -16,9 +16,16 @@ code {
   background-color: #acf0a3;
   height: 10vh;
 }
-
+.header2 {
+  background-color: white;
+  height: 10vh;
+}
 .cont {
   background-color: #acf0a3;
+  height: 92vh;
+}
+.cont2 {
+  background-color: white;
   height: 92vh;
 }
 
@@ -222,4 +229,36 @@ code {
 .footerCard {
   background-color: white !important;
   border-top: 0px solid white !important;
+}
+
+/*  resultadoooos */
+.graficaC02 {
+  width: 20% !important;
+  margin-right: 30px;
+}
+
+.white {
+  background-color: white;
+}
+.toneladasText {
+  text-shadow: 0px 2px 4px #6e6e6e;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.imgCardRec {
+  height: 40%;
+  width: 70% !important;
+  margin: auto;
+}
+
+.center {
+  justify-content: center;
+}
+
+.card #cardAgua {
+  background-color: blue;
+}
+.justifyCenter {
+  text-align: justify;
 }

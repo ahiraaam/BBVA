@@ -61,7 +61,18 @@ function Login() {
           </Row>
           <Row className="centerTextInput">
             {" "}
-            <Link to="agua">
+            <Link
+              to={{
+                pathname: "/resultados",
+                state: {
+                  CO2EquivalenteAnual: 29,
+                  PorcentajeAgua: 32.23,
+                  PorcentajeElectricidad: 23.4,
+                  PorcentajeGas: 18.6,
+                  PorcentajeGasolina: 25.77,
+                },
+              }}
+            >
               <Button className="btnIngresar blue">Ingresa con BBVA</Button>
             </Link>
           </Row>
